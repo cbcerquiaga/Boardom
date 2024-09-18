@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvvxl1il5b83m"]
+[gd_scene load_steps=3 format=3 uid="uid://bvvxl1il5b83m"]
+
+[ext_resource type="Script" path="res://skateboard.gd" id="1_sbemw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_13ocp"]
 margin = 0.02
@@ -8,26 +10,27 @@ size = Vector3(0.2, 0.01, 0.711)
 
 [node name="Skateboard" type="VehicleBody3D" parent="."]
 mass = 2.6
+script = ExtResource("1_sbemw")
 
-[node name="Front Right" type="VehicleWheel3D" parent="Skateboard"]
+[node name="Front Right Wheel" type="VehicleWheel3D" parent="Skateboard"]
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0.1, -0.06, -0.178)
 use_as_traction = true
 wheel_radius = 0.12
 suspension_travel = 0.02
 
-[node name="Front Left" type="VehicleWheel3D" parent="Skateboard"]
+[node name="Front Left Wheel" type="VehicleWheel3D" parent="Skateboard"]
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -0.1, -0.06, -0.178)
 use_as_traction = true
 wheel_radius = 0.12
 suspension_travel = 0.02
 
-[node name="Back Left" type="VehicleWheel3D" parent="Skateboard"]
+[node name="Back Left Wheel" type="VehicleWheel3D" parent="Skateboard"]
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, -0.1, -0.06, 0.178)
 use_as_traction = true
 wheel_radius = 0.12
 suspension_travel = 0.02
 
-[node name="Back Right" type="VehicleWheel3D" parent="Skateboard"]
+[node name="Back Right Wheel" type="VehicleWheel3D" parent="Skateboard"]
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0.1, -0.06, 0.178)
 use_as_traction = true
 wheel_radius = 0.12
